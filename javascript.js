@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let choice = Math.random();
+    const choice = Math.random();
 
     if (choice <= 0.33) {
         return "rock";
@@ -13,7 +13,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let choice = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
+    const choice = prompt("Choose Rock, Paper, or Scissors").toLowerCase();
     
     if (choice != "rock" && choice != "paper" && choice != "scissors") {
         return null;
