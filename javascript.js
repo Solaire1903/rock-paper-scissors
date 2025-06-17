@@ -69,6 +69,10 @@ function playGame() {
         }
     }
 
+    const buttonRock = document.createElement("button");
+    const buttonPaper = document.createElement("button");
+    const buttonScissors = document.createElement("button");
+
     let humanScore = 0;
     let computerScore = 0;
 
