@@ -59,7 +59,7 @@ function playGame() {
     const buttons = document.querySelector("#buttons");
     const results = document.querySelector("#results");
 
-    buttons.addEventListener("click", (e) => {
+    function buttonClick(e) {
         const target = e.target;
 
         switch(target.id) {
@@ -73,17 +73,22 @@ function playGame() {
                 playRound("scissors", getComputerChoice());
                 break;        
         }
-    })
+
+        const score = document.querySelector("#score");
+        score.textContent = `Player Score: ${humanScore}    Computer Score: ${computerScore}`;
+
+        if (humanScore == 5 || computerScore == 5) {
+            const winner = document.querySelector("#winner");
+            winner.textContent = humanScore > computerScore ? "Player wins!" : "Computer wins!";
+            buttons.removeEventListener("click", buttonClick);
+        }  
+    }
+
+    buttons.addEventListener("click", buttonClick);
 
     let humanScore = 0;
     let computerScore = 0;
-
-    if (humanScore === computerScore) {
-        console.log("Game ends with a tie!");
-    }
-    else {
-        console.log(humanScore > computerScore ? "Player wins!" : "Computer wins!");
-    }
+    
 }
 
 playGame();
