@@ -69,6 +69,23 @@ function playGame() {
         }
     }
 
+    const buttons = document.querySelector("#buttons");
+    buttons.addEventListener("click", (e) => {
+        const target = e.target;
+
+        switch(target.id) {
+            case "buttonRock":
+                playRound("rock", getComputerChoice());
+                break;
+            case "buttonPaper":
+                playRound("paper", getComputerChoice());
+                break;
+            case "buttonScissors":
+                playRound("scissors", getComputerChoice());
+                break;        
+        }
+    })
+
     let humanScore = 0;
     let computerScore = 0;
 
