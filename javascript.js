@@ -72,12 +72,6 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
-    for (let i = 0; i < 5; i++) {
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        playRound(humanChoice, computerChoice);
-    }
-
     if (humanScore === computerScore) {
         console.log("Game ends with a tie!");
     }
