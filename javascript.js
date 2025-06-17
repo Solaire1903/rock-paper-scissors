@@ -25,11 +25,6 @@ function getHumanChoice() {
 function playGame() {
 
     function playRound(humanChoice, computerChoice) {
-        if (humanChoice === null) {
-            console.log("Invalid input");
-            return;
-        }
-
         if (humanChoice === computerChoice) {
             console.log("It's a tie!");
             return;
