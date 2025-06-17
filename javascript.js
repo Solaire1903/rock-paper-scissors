@@ -67,7 +67,6 @@ function playGame() {
 
     const body = document.querySelector("body");
     const buttons = document.querySelector("#buttons");
-    const result = document.createElement("div");
 
     buttons.addEventListener("click", (e) => {
         const target = e.target;
