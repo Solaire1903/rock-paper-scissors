@@ -25,8 +25,6 @@ function getHumanChoice() {
 function playGame() {
 
     function playRound(humanChoice, computerChoice) {
-        const result = document.createElement("div");
-
         switch(humanChoice) {
             case computerChoice:
                 console.log("It's a tie!");
@@ -67,7 +65,10 @@ function playGame() {
         }
     }
 
+    const body = document.querySelector("body");
     const buttons = document.querySelector("#buttons");
+    const result = document.createElement("div");
+
     buttons.addEventListener("click", (e) => {
         const target = e.target;
 
